@@ -40,7 +40,7 @@ def main():
         col_ids.append(col_id)
 
     print(f"Rows - minimum: {min(row_ids)}, maximum: {max(row_ids)}")
-    print(f"Cols - minimum? {min(col_ids)}, maximum: {max(col_ids)}")
+    print(f"Cols - minimum: {min(col_ids)}, maximum: {max(col_ids)}")
 
     all_rows = range(min(row_ids), max(row_ids))
     all_cols = range(min(col_ids), max(col_ids))
