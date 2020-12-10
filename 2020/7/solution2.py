@@ -1,11 +1,10 @@
 from collections import defaultdict
 import re
 
-gold = set()
 contains = defaultdict(set)
 
 
-def traverse(color):  
+def traverse(color):
     result = 0
     for c, inner_color in contains[color]:
         result += c * traverse(inner_color) + c
