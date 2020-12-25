@@ -1,6 +1,5 @@
 import re
 import numpy
-from pprint import pprint
 from itertools import product
 from collections import defaultdict
 
@@ -14,7 +13,7 @@ def get_all_borders(image):
     # All of the above flipped
     for i in range(len(result)):
         result.append(numpy.flip(result[i]))
-    
+
     return result
 
 
@@ -35,12 +34,12 @@ it = iter(inp.splitlines())
 
 for line in it:
     if line.startswith("Tile"):
-        number = re.match("Tile (\d+):", line).groups()[0]
+        number = re.match(r"Tile (\d+):", line).groups()[0]
         number = int(number)
         images[int(number)] = []
         for line in it:
             if line.strip() == "":
-                break    
+                break
             images[number].append([c for c in line])
         images[number] = numpy.array(images[number])
 
